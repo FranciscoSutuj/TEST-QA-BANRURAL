@@ -55,7 +55,7 @@
 
   function checkGuess() {
 
-    let userGuess = Number(userGuess);
+    let userGuess = Number(guessField.value);
       if (!Number.isInteger(userGuess) || userGuess < 1 || userGuess > 100) {
       alert('Por favor ingresa un número entero entre 1 y 100.');
       guessField.value = '';
@@ -67,6 +67,7 @@
     if(userGuess === randomNumber) {
           lastResult.textContent = 'Felicitaciones! adivinaste el número!';
           lastResult.style.backgroundColor = 'green';
+          setGameOver();
     } else if(guessCount === ATTEMPS) {
           lastResult.textContent = '!!!Pérdistes!!!';
            lastResult.style.backgroundColor = 'red';
