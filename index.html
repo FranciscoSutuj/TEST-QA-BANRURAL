@@ -65,14 +65,11 @@
     guesses.textContent += userGuess + ' ';
 
     if(userGuess === randomNumber) {
-      lastResult.textContent = '!!!Pérdistes!!!';
-      lastResult.style.backgroundColor = 'black';
-      lowOrHi.textContent = '';
-      setGameOver();
+          lastResult.textContent = 'Felicitaciones! adivinaste el número!';
+          lastResult.style.backgroundColor = 'green';
     } else if(guessCount === ATTEMPS) {
-      lastResult.textContent = 'Felicitaciones! adivinaste el número!';
-      lastResult.style.backgroundColor = 'red';
-      setGameOver();
+          lastResult.textContent = '!!!Pérdistes!!!';
+           lastResult.style.backgroundColor = 'red';
     } else {
       lastResult.textContent = 'Incorrecto! ';
       lastResult.style.backgroundColor = 'green';
