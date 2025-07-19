@@ -73,10 +73,12 @@
     } else {
       lastResult.textContent = 'Incorrecto! ';
       lastResult.style.backgroundColor = 'green';
-      if(userGuess < randomNumber) {
-        lowOrHi.textContent = 'El número es mayor!';
-      } else if(userGuess > randomNumber) {
-        lowOrHi.textContent = 'El número es menor!';
+     if(userGuess > randomNumber) {
+      lowOrHi.textContent = 'Incorrecto! El número es menor!';
+       lowOrHi.style.color = 'black';
+      } else if(userGuess < randomNumber) {
+      lowOrHi.textContent = 'Incorrecto! El número es mayor!';
+      lowOrHi.style.color = 'black';
       }
     }
 
