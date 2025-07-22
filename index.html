@@ -67,17 +67,19 @@
     if(userGuess === randomNumber) {
           lastResult.textContent = 'Felicitaciones! adivinaste el número!';
           lastResult.style.backgroundColor = 'green';
+          //limpiar el contenedor despues de haber ganado
+          lowOrHi.textContent = '';
           setGameOver();
     } else if(guessCount === ATTEMPS) {
-          lastResult.textContent = '!!!Pérdistes!!!';
+            lastResult.textContent = '!!!Pérdistes!!!';
            lastResult.style.backgroundColor = 'red';
     } else {
       lastResult.textContent = 'Incorrecto! ';
       //se cambio el color del mensaje incorrecto
       lastResult.style.backgroundColor = 'black';
      if(userGuess > randomNumber) {
-      lowOrHi.textContent = 'Incorrecto! El número es menor!';
-       lowOrHi.style.color = 'black';
+        lowOrHi.textContent = 'Incorrecto! El número es menor!';
+        lowOrHi.style.color = 'black';
       } else if(userGuess < randomNumber) {
       lowOrHi.textContent = 'Incorrecto! El número es mayor!';
       lowOrHi.style.color = 'black';
